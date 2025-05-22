@@ -1,0 +1,185 @@
+/* === Цвета === */
+:root {
+    --primary-color: #10b981; /* зелено-бирюзовый */
+    --primary-hover: #06976e;
+    --bg-light: #f9fafb;
+    --text-dark: #111827;
+    --border-color: #d1d5db;
+    --danger-color: #ef4444;
+}
+
+/* === Базовые стили === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 10px; /* Общий отступ от краев экрана */
+}
+
+/* === Обёртка с отступами === */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    /* Отступы по краям экрана */
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header {
+    background: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav a:hover {
+    background: #a7f3d0;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* === Кнопки === */
+/* === Кнопки разных типов === */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px 0;
+    background: var(--primary-color); /* зелено-бирюзовый по умолчанию */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+/* --- Специальная кнопка "Редактировать" --- */
+.btn-blue {
+    background: #3b82f6; /* синий цвет */
+}
+
+.btn-blue:hover {
+    background: #2563eb;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+/* === Формы === */
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2); /* цвет тени под цвет кнопок */
+}
+
+/* === Таблица === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* === Пагинация === */
+.pagination {
+    margin: 30px auto; /* Центрирование по горизонтали с отступом сверху */
+    text-align: center;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0; /* Добавляем отступы сверху и снизу */
+}
+
+/* Остальные стили пагинации остаются такими же, как в предыдущем ответе */
+
+/* === Футер === */
+.footer {
+    margin: 20px auto 40px; /* Отступ сверху 20px, по бокам auto, снизу 40px */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    width: 100%;
+    max-width: 1000px; /* Такая же ширина, как у контейнера */
+    padding: 0 20px; /* Добавляем отступы по бокам */
+    box-sizing: border-box;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
