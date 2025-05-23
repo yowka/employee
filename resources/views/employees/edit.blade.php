@@ -27,7 +27,7 @@
     </div>
     <div>
         <label>Дата рождения:
-            <input type="date" name="Дата_рождения" value="{{ $employee->Дата_рождения?->format('Y-m-d') }}" required>
+            <input type="date" name="Дата_рождения" value="{{ $employee->Дата_рождения}}" required>
         </label>
     </div>
     <div>
@@ -37,16 +37,16 @@
     </div>
     <div>
         <label>Возраст:
-            <input type="number" name="Возраст" value="{{ $employee->Возраст }}" readonly>
+            <input type="number" value="{{ $employee->Возраст }}" readonly disabled>
         </label>
     </div>
     <div>
         <label>Дата найма:
-            <input type="date" name="Дата_приема" value="{{ $employee->Дата_приема?->format('Y-m-d') }}" required>        </label>
+            <input type="date" name="Дата_приема" value="{{ $employee->Дата_приема }}" required>        </label>
     </div>
     <div>
         <label>Стаж работы:
-            <input type="number" name="Стаж_работы" value="{{ $employee->Стаж_работы }}" readonly>
+            <input type="number" value="{{ $employee->Стаж_работы }}" readonly disabled>
         </label>
     </div>
     <div>

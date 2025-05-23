@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Employee extends Model
 {public $timestamps = false;
@@ -24,21 +25,21 @@ class Employee extends Model
         'Снилс',
         'Телефон'
     ];
-    protected $casts = [
-        'Дата_рождения' => 'date',
-        'Дата_приема' => 'date',
-    ];
     protected static function boot()
     {
         parent::boot();
 
         static::saving(function ($employee) {
+            // Рассчитываем возраст
             if ($employee->Дата_рождения) {
-                $employee->Возраст = now()->diffInYears($employee->Дата_рождения);
+                $birthDate = Carbon::parse($employee->Дата_рождения);
+                $employee->Возраст = $birthDate->age; // автоматически считает возраст
             }
 
+            // Рассчитываем стаж работы
             if ($employee->Дата_приема) {
-                $employee->Стаж_работы = now()->diffInYears($employee->Дата_приема);
+                $hireDate = Carbon::parse($employee->Дата_приема);
+                $employee->Стаж_работы = $hireDate->diffInYears(Carbon::now());
             }
         });
     }

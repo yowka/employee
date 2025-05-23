@@ -1,6 +1,5 @@
-/* === Цвета === */
 :root {
-    --primary-color: #10b981; /* зелено-бирюзовый */
+    --primary-color: #10b981;
     --primary-hover: #06976e;
     --bg-light: #f9fafb;
     --text-dark: #111827;
@@ -8,21 +7,18 @@
     --danger-color: #ef4444;
 }
 
-/* === Базовые стили === */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f9fafb;
     color: var(--text-dark);
     margin: 0;
-    padding: 10px; /* Общий отступ от краев экрана */
+    padding: 10px;
 }
 
-/* === Обёртка с отступами === */
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    /* Отступы по краям экрана */
     width: 100%;
     box-sizing: border-box;
     padding-left: 10px;
@@ -60,13 +56,11 @@ h2 {
     margin-top: 20px;
 }
 
-/* === Кнопки === */
-/* === Кнопки разных типов === */
 .btn {
     display: inline-block;
     padding: 6px 12px;
     margin: 5px 0;
-    background: var(--primary-color); /* зелено-бирюзовый по умолчанию */
+    background: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -78,9 +72,8 @@ h2 {
     background: var(--primary-hover);
 }
 
-/* --- Специальная кнопка "Редактировать" --- */
 .btn-blue {
-    background: #3b82f6; /* синий цвет */
+    background: #3b82f6;
 }
 
 .btn-blue:hover {
@@ -95,7 +88,6 @@ h2 {
     background: #dc2626;
 }
 
-/* === Формы === */
 form div {
     margin-bottom: 10px;
 }
@@ -120,10 +112,9 @@ form input:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2); /* цвет тени под цвет кнопок */
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
 }
 
-/* === Таблица === */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -151,29 +142,29 @@ tr:hover {
     background: #f9fafb;
 }
 
-/* === Пагинация === */
 .pagination {
-    margin: 30px auto; /* Центрирование по горизонтали с отступом сверху */
+    margin: 30px auto;
     text-align: center;
     font-size: 0.95rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    padding: 10px 0; /* Добавляем отступы сверху и снизу */
+    padding: 10px 0;
+    a{
+        font-size: 26px;
+    }
 }
 
-/* Остальные стили пагинации остаются такими же, как в предыдущем ответе */
 
-/* === Футер === */
 .footer {
-    margin: 20px auto 40px; /* Отступ сверху 20px, по бокам auto, снизу 40px */
+    margin: 20px auto 40px;
     text-align: center;
     font-size: 0.9rem;
     color: #6b7280;
     width: 100%;
-    max-width: 1000px; /* Такая же ширина, как у контейнера */
-    padding: 0 20px; /* Добавляем отступы по бокам */
+    max-width: 1000px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 

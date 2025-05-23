@@ -25,9 +25,9 @@
                 <td>{{ $employee->id }}</td>
                 <td>{{ $employee->Фамилия }} {{ $employee->Имя }} {{ $employee->Отчество ?? '' }}</td>
                 <td>{{ $employee->Должность }}</td>
-                <td>{{ $employee->Дата_рождения->format('d.m.Y')}}</td>
+                <td>{{ $employee->Дата_рождения}}</td>
                 <td>{{ $employee->Возраст }}</td>
-                <td>{{ $employee->Дата_приема->format('d.m.Y')}}</td>
+                <td>{{ $employee->Дата_приема}}</td>
                 <td>{{ $employee->Стаж_работы }}</td>
                 <td>{{ $employee->Телефон }}</td>
                 <td>
@@ -49,6 +49,13 @@
     </table>
 </div>
 
-{{ $employees->links() }}
-
+<div class="pagination">
+    @if ($employees->lastPage() > 1)
+        @for ($i = 1; $i <= $employees->lastPage(); $i++)
+            <a href="{{ $employees->url($i) }}" style="margin: 0 5px; text-decoration: none;">
+                {{ $i }}
+            </a>
+        @endfor
+    @endif
+</div>
 @include('includes.footer')
